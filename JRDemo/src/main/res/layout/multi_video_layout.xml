@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical"
+    android:layout_height="150dp">
+    <FrameLayout
+        android:layout_marginLeft="15dp"
+        android:id="@+id/video_replace"
+        android:minWidth="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"></FrameLayout>
+    <TextView
+        android:textColor="@color/white"
+        android:id="@+id/phone"
+        android:textSize="16sp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

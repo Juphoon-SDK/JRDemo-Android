@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="account_basic"
+        android:persistent="false"
+        android:title="@string/advanced_sip_register">
+        <CheckBoxPreference
+            android:key="account_reg_no_digest"
+            android:persistent="false"
+            android:title="@string/advanced_reg_no_digest" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_reg_expire_time"
+            android:persistent="false"
+            android:title="@string/advanced_reg_expire_time" />
+        <CheckBoxPreference
+            android:key="advanced_open_subs"
+            android:persistent="false"
+            android:title="@string/advanced_open_subs" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_subs_expire_time"
+            android:persistent="false"
+            android:title="@string/advanced_sub_expire_time" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="account_basic"
+        android:persistent="false"
+        android:title="@string/advanced_sip_heartbeat">
+        <ListPreference
+            android:entries="@array/keep_alive_type"
+            android:entryValues="@array/keep_alive_type"
+            android:key="advanced_heartbeat"
+            android:persistent="false"
+            android:title="@string/advanced_heartbeat" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_ps_heartbeat"
+            android:persistent="false"
+            android:title="@string/advanced_ps_heartbeat" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_wifi_heartbeat"
+            android:persistent="false"
+            android:title="@string/advanced_wifi_heartbeat" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="account_basic"
+        android:persistent="false"
+        android:title="@string/advanced_sip_advanced">
+        <ListPreference
+            android:entries="@array/sess_type"
+            android:entryValues="@array/sess_type"
+            android:key="advanced_sess_type"
+            android:persistent="false"
+            android:title="@string/advanced_sess_type" />
+
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_sess_len"
+            android:persistent="false"
+            android:title="@string/advanced_sess_len" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_sess_min_len"
+            android:persistent="false"
+            android:title="@string/advanced_sess_min_len" />
+        <CheckBoxPreference
+            android:key="advanced_use_tel_uri"
+            android:persistent="false"
+            android:title="@string/advanced_use_tel_uri" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

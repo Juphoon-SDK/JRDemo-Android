@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_transport_media">
+
+        <ListPreference
+            android:entries="@array/srtp_type_array"
+            android:entryValues="@array/srtp_type_array"
+            android:key="srtp_type"
+            android:persistent="false"
+            android:title="@string/srtp_type" />
+
+        <CheckBoxPreference
+            android:key="advanced_audio_rtcpmux"
+            android:persistent="false"
+            android:title="@string/advanced_audio_rtcpmux" />
+        <CheckBoxPreference
+            android:key="advanced_video_rtcpmux"
+            android:persistent="false"
+            android:title="@string/advanced_video_rtcpmux" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_transport_nat">
+
+        <ListPreference
+            android:entries="@array/nat"
+            android:entryValues="@array/nat"
+            android:key="advanced_nat_type"
+            android:persistent="false"
+            android:title="@string/advanced_nat_type" />
+
+        <EditTextPreference
+            android:key="advanced_stun_server"
+            android:persistent="false"
+            android:title="@string/advanced_stun_server" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_stun_server_port"
+            android:persistent="false"
+            android:title="@string/advanced_stun_server_port" />
+    </PreferenceCategory>
+</PreferenceScreen>

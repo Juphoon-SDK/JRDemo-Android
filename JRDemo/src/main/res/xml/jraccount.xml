@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="account_basic"
+        android:persistent="false"
+        android:title="@string/empty_title">
+        <EditTextPreference
+            android:key="account_username"
+            android:persistent="false"
+            android:title="@string/username" />
+        <EditTextPreference
+            android:key="account_password"
+            android:password="true"
+            android:persistent="false"
+            android:title="@string/password" />
+        <EditTextPreference
+            android:key="account_authname"
+            android:persistent="false"
+            android:title="@string/authname" />
+        <EditTextPreference
+            android:key="account_regip"
+            android:persistent="false"
+            android:title="@string/regip" />
+        <EditTextPreference
+            android:key="account_regrealm"
+            android:persistent="false"
+            android:title="@string/regrealm" />
+
+        <ListPreference
+            android:entries="@array/transport_type"
+            android:entryValues="@array/transport_type"
+            android:key="advanced_sip_transport_type"
+            android:persistent="false"
+            android:title="@string/advanced_transport_type" />
+
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_sip_port"
+            android:persistent="false"
+            android:title="@string/advanced_port" />
+
+        <CheckBoxPreference
+            android:key="account_sip_instance_enable"
+            android:persistent="false"
+            android:title="@string/advanced_sip_instance_enable" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="account_advanced_settings"
+        android:persistent="false"
+        android:title="@string/advanced">
+        <Preference
+            android:key="account_advanced_sip"
+            android:persistent="false"
+            android:title="@string/advanced_sip" />
+        <Preference
+            android:key="account_advanced_audio"
+            android:persistent="false"
+            android:title="@string/advanced_audio" />
+        <Preference
+            android:key="account_advanced_video"
+            android:persistent="false"
+            android:title="@string/advanced_video" />
+        <Preference
+            android:key="account_advanced_transport"
+            android:persistent="false"
+            android:title="@string/advanced_transport" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

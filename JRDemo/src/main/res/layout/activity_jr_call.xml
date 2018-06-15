@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/call_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@color/base"
+    android:soundEffectsEnabled="false">
+
+    <ImageView
+        android:id="@+id/call_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:soundEffectsEnabled="false" />
+
+    <FrameLayout
+        android:id="@+id/video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/operation_layer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1A000000">
+
+        <include layout="@layout/operation_layer" />
+
+    </RelativeLayout>
+
+    <ui.view.RotateLayout
+        android:id="@+id/call_error_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="gone">
+
+        <ui.view.CancelableTextView
+            android:id="@+id/call_error"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:soundEffectsEnabled="false"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+    </ui.view.RotateLayout>
+</RelativeLayout>

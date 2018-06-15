@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="white">#ffffff</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="sample_rcsmsg_list_background_pressed">#4C00B4F4</color>
+    <color name="base">#ff00bcd4</color>
+    <color name="light_gray">#dcdcdc</color>
+    <color name="orange">#f6be1a</color>
+    <color name="bg_black">#5a000000</color>
+    <color name="voice_gray">#7eb6b5b5</color>
+    <color name="text_color">#313131</color>
+    <color name="login_divider_color">#dadada</color>
+
+    <!-- call -->
+    <color name="call_float_bg_color">#80000000</color>
+    <color name="call_poor_network_bg">#fff7931e</color>
+    <color name="call_btn_text_color">#ffffff</color>
+    <color name="call_btn_text_disabled_color">#4dffffff</color>
+    <color name="missed">#CEEE0600</color>
+
+    <color name="default_circle_indicator_fill_color">#FFFFFFFF</color>
+    <color name="default_circle_indicator_page_color">#4dffffff</color>
+    <color name="default_circle_indicator_stroke_color">#FFDDDDDD</color>
+    <color name="call_incoming_bg_anim_color">#4d26d650</color>
+    <color name="call_incoming_bg_slide_color">#66ffffff</color>
+    <color name="call_incoming_decline_bg_normal_color">#fc3c40</color>
+    <color name="call_incoming_decline_bg_pressed_color">#ccfc3c40</color>
+    <color name="call_incoming_answer_bg_normal_color">#26d650</color>
+    <color name="call_incoming_answer_bg_pressed_color">#cc26d650</color>
+    <color name="call_incoming_answer_bg_selected_color">#00000000</color>
+    <color name="call_conference_item_bg_pressed_color">#1a000000</color>
+    <color name="call_conference_item_bg_disabled_color">#66afbdc4</color>
+    <color name="dialpad_key_background">@android:color/transparent</color>
+    <color name="dialpad_key_background_pressed">#bdeef4</color>
+    <color name="call_menu_end_bg_normal_color">#fffc3c40</color>
+    <color name="call_menu_end_bg_pressed_color">#80fc3c40</color>
+    <color name="call_menu_end_bg_disabled_color">#4d000000</color>
+    <color name="call_menu_redial_bg_normal_color">#ff26D650</color>
+    <color name="call_menu_redial_bg_pressed_color">#8026D650</color>
+    <color name="call_menu_redial_bg_disabled_color">#4d000000</color>
+
+    <!--统一认证-->
+    <color name="sso_flow_reminder_button_gradient_startcolor">#66BAFF</color>
+    <color name="sso_flow_reminder_button_gradient_endcolor">#20A2EB</color>
+    <color name="sso_flow_order_bottom_corner_light_blue">#e3eff8</color>
+    <color name="sso_flow_order_dark_gray">#a6a6a6</color>
+    <color name="sso_flow_reminder_transparent">#66000000</color>
+    <color name="sso_flow_reminder_transparent_order_page">#80000000</color>
+    <color name="sso_flow_text_transparent">#00000000</color>
+    <color name="sso_color_white">#ffffff</color>
+    <color name="sso_remind_text_gray">#646464</color>
+    <color name="sso_remind_text_black">#ff000000</color>
+    <color name="sso_flow_reminder_light_gray">#bcc6ca</color>
+    <color name="sso_flow_reminder_background_gray">#f6f6f6</color>
+    <color name="sso_color_flow_gray">#ff3c3c3c</color>
+    <color name="sso_color_flow_red">#ffff1818</color>
+</resources>

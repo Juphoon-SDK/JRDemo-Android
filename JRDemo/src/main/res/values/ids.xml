@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="dialpad_0" type="id" />
+    <item name="dialpad_1" type="id" />
+    <item name="dialpad_2" type="id" />
+    <item name="dialpad_3" type="id" />
+    <item name="dialpad_4" type="id" />
+    <item name="dialpad_5" type="id" />
+    <item name="dialpad_6" type="id" />
+    <item name="dialpad_7" type="id" />
+    <item name="dialpad_8" type="id" />
+    <item name="dialpad_9" type="id" />
+</resources>

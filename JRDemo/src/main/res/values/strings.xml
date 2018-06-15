@@ -1,0 +1,288 @@
+<resources>
+    <string name="app_name">JRDemo</string>
+
+    <!--&lt;!&ndash; account &ndash;&gt;-->
+    <string name="logout">注销</string>
+    <string name="logouting">注销中</string>
+    <string name="add_account">添加帐户</string>
+    <string name="login_account">添加账号</string>
+    <string name="port">端口</string>
+    <string name="regcap">注册能力</string>
+    <string name="cmcc_regcap">CMCC注册能力</string>
+    <string name="account_activity_have_change">设置有更改，是否保存?</string>
+    <string name="account_activity_confirm_delete">确定删除此账号?</string>
+
+    <string name="logouted">logouted</string>
+    <string name="login_error_send_msg">Login Failed, Send Msg Error</string>
+    <string name="login_error_auth_fail">Login Failed, Auth Failed,Invalid User or Password</string>
+    <string name="login_error_invalid_user">Login Failed, Invalid User</string>
+    <string name="login_error_timeout">Login Failed, Timeout</string>
+    <string name="login_error_srv_busy">Login Failed, Server Busy</string>
+    <string name="login_error_not_reach">Login Failed, Server Not Reach</string>
+    <string name="login_error_srv_forbidden">Login Failed, User or Password Error</string>
+    <string name="login_error_srv_unavailable">Login Failed, Server Unvaliable</string>
+    <string name="login_error_dns_qry">Login Failed, DNS Query Error</string>
+    <string name="login_error_network">Login Failed, Network Error</string>
+    <string name="login_error_internal">Login Failed, Server Internal Error</string>
+    <string name="login_error_deactive">Account has been logined in the other equipment, Relogin?</string>
+    <string name="login_error_rejected">Account has been logined in the other equipment, Forced offline</string>
+    <string name="login_error_sip_sess">Login Failed, Register stop or unregsiter error</string>
+    <string name="login_error_unreg">Register stop or unregsiter error</string>
+    <string name="login_error_invalid_addr">Login Failed, invalid ip addr</string>
+    <string name="login_error_not_found">Login Failed, user not found</string>
+    <string name="login_error_auth_reject">Login Failed, authentication rejected, rorbidden to user register in hss</string>
+    <string name="login_error_not_match">Login Failed, identities not match, the pvi of user not inconformity</string>
+    <string name="login_error_user_not_exist">Login Failed, user not exist</string>
+    <string name="login_error_other">Login Failed, Other Error</string>
+
+    <!--&lt;!&ndash; advanced &ndash;&gt;-->
+    <!--<string name="advanced_log_level">日志打印等级</string>-->
+    <!--<string name="advanced_sip">SIP</string>-->
+    <!--<string name="advanced_im">IM</string>-->
+    <!--<string name="advanced_use_tel_uri">使用 Tel URI</string>-->
+    <!--<string name="advanced_server_forward">服务器转发</string>-->
+    <!--<string name="advanced_cpm">CPM</string>-->
+    <!--<string name="advanced_delivery_request">请求送达回执</string>-->
+    <!--<string name="advanced_delivery_msg">请求消息送达成功回执</string>-->
+    <!--<string name="advanced_delivery_failed_msg">请求消息送达失败回执</string>-->
+    <!--<string name="advanced_delivery_msg_to_sms">请求消息转短信送达回执</string>-->
+    <!--<string name="advanced_delivery_response">响应消息送达回执</string>-->
+    <!--<string name="advanced_display_request">请求消息阅读回执</string>-->
+    <!--<string name="advanced_display_response">响应消息阅读回执</string>-->
+    <!--<string name="advanced_msrp_over_tls">MSRP over TLS</string>-->
+    <!--<string name="advanced_max_group_im_size">最大群聊文本大小(b)</string>-->
+    <!--<string name="advanced_max_file_size">最大文件大小(kb)</string>-->
+    <!--<string name="advanced_warn_file_size">警告文件大小(kb)</string>-->
+    <!--<string name="advanced_max_group_member_size">群聊最大参与人数限制</string>-->
+    <!--<string name="advanced_sess_mode_with_msg">Session Mode 请求带消息</string>-->
+    <!--<string name="srtp_type">SRTP 类型</string>-->
+    <!--<string name="advanced_srtp_auth_rtp">开启RTP认证</string>-->
+    <!--<string name="advanced_srtp_encrypt_rtcp">开启RTCP加密</string>-->
+    <!--<string name="advanced_srtp_encrypt_rtp">开启RTP加密</string>-->
+    <!--<string name="advanced_auto_accept">自动接收</string>-->
+    <!--<string name="advanced_thumbnail">缩略图</string>-->
+    <!--<string name="advanced_conference_uri">IM Conference Factory URI</string>-->
+    <!--<string name="advanced_multi_text_uri">Multi Text URI</string>-->
+    <!--<string name="advanced_call_conf_uri">Call Conference Factory URI</string>-->
+    <!--<string name="advanced_use_sess_mode">使用 Session 模式</string>-->
+    <!--<string name="advanced_msrp_msg_print">MSRP 日志打印</string>-->
+    <!--<string name="advanced_mdm">MDM</string>-->
+    <!--<string name="advanced_enable_mdm">使用MDM</string>-->
+    <!--<string name="advanced_mmp">MMP</string>-->
+    <!--<string name="advanced_audio">音频</string>-->
+    <!--<string name="advanced_video">视频</string>-->
+    <!--<string name="advanced_jusqos">JusQos技术</string>-->
+    <!--<string name="advanced_media">媒体</string>-->
+    <!--<string name="advanced_nat_traversal">NAT穿透</string>-->
+    <!--<string name="advanced_protocol_setting">协议设置</string>-->
+    <!--<string name="advanced_preference_section_server_address">服务器地址设置</string>-->
+    <!--<string name="advanced_preference_dm_server_address">DM 地址</string>-->
+    <!--<string name="advanced_preference_qr_server_address">二维码地址</string>-->
+    <!--<string name="advanced_preference_profile_server_address">profile 地址</string>-->
+    <!--<string name="advanced_preference_public_account_server_address">公众账号地址</string>-->
+    <!--<string name="advanced_transport_type">传输类型</string>-->
+    <!--<string name="advanced_port">端口</string>-->
+    <!--<string name="advanced_sip_dscp_value">SIP DSCP标签(0—63)</string>-->
+    <!--<string name="advanced_audio_dscp_value">Voice DSCP标签(0—63)</string>-->
+    <!--<string name="advanced_video_dscp_value">Video DSCP标签(0—63)</string>-->
+    <!--<string name="advanced_expire_time">超时时间</string>-->
+    <!--<string name="advanced_reg_sub_expire_time">注册订阅超时时间</string>-->
+    <!--<string name="advanced_tls_very_type">TLS 验证类型</string>-->
+    <!--<string name="advanced_reg_no_digest">注册无鉴权头</string>-->
+    <!--<string name="advanced_use_ipv4">使用Ipv4</string>-->
+    <!--<string name="advanced_codec">编解码</string>-->
+    <!--<string name="advanced_codec_auto_priority">自动调节编码优先级</string>-->
+    <!--<string name="advanced_send_agc">发送端增益控制</string>-->
+    <!--<string name="advanced_recv_agc">接收端增益控制</string>-->
+    <!--<string name="advanced_send_anr">发送端自动降噪</string>-->
+    <!--<string name="advanced_recv_anr">接收端自动降噪</string>-->
+    <!--<string name="advanced_vad">非连续传输</string>-->
+    <!--<string name="advanced_ptime">打包时长(ms)</string>-->
+    <!--<string name="advanced_aec">噪音消除</string>-->
+    <!--<string name="advanced_resolution">初始分辨率</string>-->
+    <!--<string name="advanced_resolution_control">自适应分辨率</string>-->
+    <!--<string name="advanced_ars_mode">帧速率控制</string>-->
+    <!--<string name="advanced_bem">带宽高效模式</string>-->
+    <!--<string name="advanced_rpsi">可靠引用帧</string>-->
+    <!--<string name="advanced_nack">NACK</string>-->
+    <!--<string name="advanced_asymnego">不对称协商</string>-->
+    <!--<string name="advanced_video_ars">视频动态码率调整</string>-->
+    <!--<string name="advanced_video_fec">视频冗余</string>-->
+    <!--<string name="advanced_audio_ars">音频动态码率调整</string>-->
+    <!--<string name="advanced_audio_fec">音频冗余</string>-->
+    <!--<string name="advanced_dtmf">DTMF</string>-->
+    <!--<string name="advanced_rtcpmux">RTP/RTCP端口复用</string>-->
+    <!--<string name="advanced_nat_type">NAT穿透类型</string>-->
+    <!--<string name="advanced_stun_support_turn">STUN服务器支持TURN</string>-->
+    <!--<string name="advanced_sess_type">定时器类型</string>-->
+    <!--<string name="advanced_sess_len">定时器时长(s)</string>-->
+    <!--<string name="advanced_sess_min_len">最小定时器时长(s)</string>-->
+    <!--<string name="advanced_heartbeat">心跳</string>-->
+    <!--<string name="advanced_bitrate">初始码率(kbps)</string>-->
+    <!--<string name="advanced_framerate">最大帧速率(fps)(1~30)</string>-->
+    <!--<string name="advanced_framerate_control">自适应帧速率</string>-->
+    <!--<string name="advanced_keyperoid">关键帧间隔(s)(0~600)</string>-->
+    <!--<string name="advanced_firbyinfo">关键帧请求方式</string>-->
+    <!--<string name="advanced_dtmf_payload">DTMF Payload(96~127)</string>-->
+    <!--<string name="advanced_stun_server">STUN服务器地址</string>-->
+    <!--<string name="advanced_stun_server_port">STUN服务器端口</string>-->
+    <!--<string name="advanced_off">关闭</string>-->
+    <string name="advanced_popup_message">请输入 %1$d 和 %2$d 之间的数值</string>
+    <string name="advanced_popup_message_min">请输入大于 %1$d 的数值</string>
+    <!--<string name="advanced_auto_accept_group_chat">自动接收群聊</string>-->
+    <!--<string name="advanced_sbc_stun_detect">SBC STUN 探测</string>-->
+    <!--<string name="advanced_stg_use_type">STG 隧道</string>-->
+    <!--<string name="advanced_stg_tunnel_type">STG 服务器隧道类型</string>-->
+    <!--<string name="advanced_stg_tunnel_ip">STG 服务器地址</string>-->
+    <!--<string name="advanced_stg_tunnel_port">STG 服务器端口</string>-->
+    <!--<string name="advanced_enable_cpim_base64">文本Base64编码</string>-->
+    <!--<string name="advanced_enable_thumb_base64">缩略图Base64编码</string>-->
+    <!--<string name="advanced_capbility_optimize">能力查询优化</string>-->
+    <string name="account_manager">Account Manager</string>
+    <string name="account">Account</string>
+    <string name="accountname">Account Name</string>
+    <string name="next">Next</string>
+    <string name="save">Save</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="authname">Authname</string>
+    <string name="nickname">Nickname</string>
+    <string name="regip">Server Address</string>
+    <string name="regrealm">Realm</string>
+    <string name="area_code">Area Code</string>
+    <string name="advanced">Advanced</string>
+    <string name="empty_title" translatable="false">&#160;</string>
+
+    <!-- advanced -->
+    <!--sip-->
+    <string name="advanced_sip">SIP</string>
+    <string name="advanced_sip_register">Register</string>
+    <string name="advanced_sip_heartbeat">Heartbeat</string>
+    <string name="advanced_sip_advanced">Advanced Settings</string>
+
+    <string name="regtype">Reg Type</string>
+    <string name="advanced_reg_no_digest">Reg No Digest</string>
+    <string name="advanced_reg_expire_time">Reg Refresh Period(s)</string>
+    <string name="advanced_open_subs">Reg Subscribe</string>
+    <string name="advanced_sub_expire_time">Reg Subscribe Period(s)</string>
+
+    <string name="advanced_heartbeat">Heartbeat Type</string>
+    <string name="advanced_ps_heartbeat">Heartbeat Period Data(s)</string>
+    <string name="advanced_wifi_heartbeat">Heartbeat Period WiFi(s)</string>
+
+    <string name="advanced_sess_type">Timer Type</string>
+    <string name="advanced_sess_len">Timer Data(s)</string>
+    <string name="advanced_sess_min_len">Minimum Timer(s)</string>
+    <string name="advanced_use_tel_uri">Tel URI</string>
+    <!--audio-->
+    <string name="advanced_audio">Audio</string>
+    <string name="advanced_audio_code">Audio Codec</string>
+    <string name="advanced_audio_dtmf">DTMF</string>
+    <string name="advanced_audio_agc">AGC</string>
+    <string name="advanced_audio_anr">ANR</string>
+    <string name="advanced_audio_jitter_buffer"> Jitter Buffer</string>
+    <string name="advanced_audio_qos">Audio QoS Settings</string>
+
+    <string name="advanced_audio_bitrate">Audio Bitrate(kbps)</string>
+    <string name="advanced_ptime">Audio Packet Time(ms)</string>
+
+    <string name="advanced_dtmf_type">DTMF Type</string>
+    <string name="advanced_dtmf_payload">DTMF Payload (96-127)</string>
+    <string name="advanced_dtmf_notify">DTMF Notify</string>
+
+    <string name="advanced_send_agc_mode">Audio Send AGC type</string>
+    <string name="advanced_send_agc">Audio Send AGC(0-30)</string>
+    <string name="advanced_recv_agc">Audio Recv AGC(0-30)</string>
+    <string name="advanced_recv_agc_mode">Audio Recv AGC type</string>
+
+    <string name="advanced_send_anr_mode">Audio Send ANR</string>
+    <string name="advanced_recv_anr_mode">Audio Recv ANR</string>
+
+    <string name="advanced_jitter_buffer_min_delay">Minimum Delay</string>
+    <string name="advanced_jitter_buffer_max_packet">Maximum Packet Number</string>
+
+    <string name="advanced_vad">DTX Type</string>
+    <string name="advanced_aec">AEC Type</string>
+    <string name="advanced_fec">Audio FEC</string>
+    <!--video-->
+    <string name="advanced_video">Video</string>
+    <string name="advanced_video_code">Video Codec</string>
+    <string name="advanced_video_bitrate">Video Bitrate</string>
+    <string name="advanced_video_resolution">Video Resolution</string>
+    <string name="advanced_video_framerate">Video Framerate</string>
+    <string name="advanced_video_qos">Video QoS Settings</string>
+    <string name="advanced_video_other">Other Settings</string>
+
+    <string name="advanced_h264_packet_mode">H264 Packet Mode</string>
+    <string name="advanced_h264_payload">H264 Payload(118-127)</string>
+
+    <string name="advanced_video_bitrate_value">Bitrate（kbps）</string>
+    <string name="advanced_video_bitrate_control">Video ARS</string>
+
+    <string name="advanced_resolution_max"> Default Video Resolution</string>
+    <string name="advanced_resolution_control">Video Auto Resolution</string>
+
+    <string name="advanced_framerate_max">Video Framerate(fps)(1-30)</string>
+    <string name="advanced_framerate_control">Video Auto Framerate</string>
+
+    <string name="advanced_keyperoid">Video Key Framerate Period(s)(0-600)</string>
+    <string name="advanced_firbyinfo">Video Key Framerate by info</string>
+    <string name="advanced_rpsi">Video RPSI</string>
+    <string name="advanced_video_fec">Video FEC</string>
+    <string name="advanced_nack">Video NACK</string>
+    <string name="advanced_rtx">Video RTX</string>
+    <string name="advanced_bem">Video BEM</string>
+
+    <string name="advanced_video_capture">Default Front-facing Camera</string>
+    <!--tranport-->
+    <string name="advanced_transport">Network</string>
+    <string name="advanced_transport_media">Media Transfer Settings</string>
+    <string name="advanced_transport_nat">NAT Traversal Settings</string>
+
+    <string name="srtp_type">SRTP Encryption Type</string>
+    <string name="advanced_audio_rtcpmux">Audio RTP/RTCP Port Reuse</string>
+    <string name="advanced_video_rtcpmux">Video RTP/RTCP Port Reuse</string>
+
+    <string name="advanced_nat_type">NAT Traversal Type</string>
+    <string name="advanced_stun_server">STUN Server</string>
+    <string name="advanced_stun_server_port">STUN Port</string>
+    <string name="advanced_transport_type">Transport Type</string>
+    <string name="advanced_port">Port</string>
+    <string name="advanced_sip_instance_enable">Support Multi Terminal</string>
+
+    <string name="audio_length_too_short">音频长度太短</string>
+    <string name="swipe_up_will_cancel_send_audio_message">手指上滑, 取消发送</string>
+    <string name="touch_up_will_cancel_send_audio_message">松开手指, 取消发送</string>
+    <string name="touch_to_record">按住 录音</string>
+    <string name="un_touch_to_send">松开 发送</string>
+    <string name="un_touch_to_cancel">松开 取消</string>
+
+    <!-- call -->
+    <string name="redial">重拨</string>
+    <string name="call_back">回拨</string>
+    <string name="cancel">取消</string>
+    <string name="call_hold">呼叫保持</string>
+    <string name="statistics">统计信息</string>
+    <string name="video_call">视频通话</string>
+    <string name="multi_call">多方通话</string>
+    <string name="voice_call">语音通话</string>
+    <string name="add_call">添加通话</string>
+    <string name="camera_on">开启摄像头</string>
+    <string name="camera_off">关闭摄像头</string>
+    <string name="switch_camera">切换摄像头</string>
+    <string name="calling">接通中</string>
+    <string name="alerting">振铃中</string>
+    <string name="ending">通话结束</string>
+    <string name="del">删除</string>
+    <string name="codec">编解码</string>
+    <string name="hold">挂起</string>
+    <string name="held">被挂起</string>
+    <string name="connecting">连接中</string>
+    <string name="connect">已连接</string>
+    <string name="pending">邀请中</string>
+    <string name="leaved">离开</string>
+    <string name="about">关于</string>
+    <string name="recent">最近</string>
+    <string name="about_version_num">Version %s</string>
+    <string name="kick_member_message">确定把 %1$s 踢出会议吗？</string>
+</resources>

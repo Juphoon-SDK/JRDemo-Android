@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/default_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_toLeftOf="@+id/date"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/icon"
+        android:textColor="@color/text_color"
+        android:textSize="15sp"
+        android:id="@+id/user_name"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:maxEms="10"
+        android:layout_toLeftOf="@+id/date"
+        android:layout_below="@+id/user_name"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/icon"
+        android:textColor="@color/text_color"
+        android:id="@+id/message"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/text_color"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/date"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/group_invite_ok"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="接受"
+        android:textSize="12sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/message"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:id="@+id/group_invite_ignore"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="忽略"
+        android:textSize="12sp"
+        android:layout_marginRight="120dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/group_invite_ok"
+        android:layout_below="@id/message" />
+
+    <View
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+</RelativeLayout>
