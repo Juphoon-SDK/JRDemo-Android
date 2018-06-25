@@ -1,0 +1,2 @@
+JRCallStorage不开放一部分接口给界面，类还是开放
+具体改动参考GITHUB修改

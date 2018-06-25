@@ -30,7 +30,6 @@ public class MainApplication extends Application implements JRCallCallback {
     public static Context sApp;
     public static boolean sSdkInitSucceed = false;
     private int mCount = 0;
-    public static JRCallItem sCallItem;
 
     @Override
     public void onCreate() {
@@ -94,12 +93,10 @@ public class MainApplication extends Application implements JRCallCallback {
 
     @Override
     public void onCallItemRemove(JRCallItem item, JRCallConstants.TremReason error) {
-        sCallItem = null;
     }
 
     @Override
     public void onCallItemAdd(JRCallItem item) {
-        sCallItem = item;
         if(item.getCallDirection() == JRCallConstants.Direction.INCOMING) {
             Intent intent = new Intent(this, JRCallActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);

@@ -34,6 +34,7 @@ import com.juphoon.rcs.JRCallCallback;
 import com.juphoon.rcs.JRCallConstants;
 import com.juphoon.rcs.JRCallItem;
 import com.juphoon.rcs.JRCallMember;
+import com.juphoon.rcs.JRCallStorage;
 import com.juphoon.rcs.JRClient;
 import com.juphoon.rcs.JRLog;
 import com.juphoon.rcs.JRMediaDevice;
@@ -121,7 +122,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                 case REJECT_VIDEO_REQ:
                     AlertDialog dialog = (AlertDialog) msg.obj;
                     dialog.dismiss();
-                    JRCall.getInstance().answerUpdate(mCurItem, false);
+                    JRCall.getInstance().answerUpdate(false);
                     Toast.makeText(JRCallActivity.this, "已拒绝对方视频邀请", Toast.LENGTH_SHORT).show();
                     break;
             }
@@ -149,6 +150,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
 
     @Override
     public void onBackPressed() {
+
         if (mCurItem != null) {
             return;
         }
@@ -165,7 +167,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
         boolean isVideo = intent.getBooleanExtra(CommonValue.JRCALL_EXTRA_IS_VIDEO, false);
         boolean isMulti = intent.getBooleanExtra(CommonValue.JRCALL_EXTRA_IS_MULTI, false);
         String token = intent.getStringExtra(CommonValue.JRCALL_EXTRA_TOKEN);
-        mCurItem = MainApplication.sCallItem;
+        mCurItem = JRCallStorage.getInstance().getCurItem();
         if (mCurItem != null) {
             setInComing(mCurItem);
         } else {
@@ -245,19 +247,19 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                         mStatistics.showStat();
                     }
                 } else if (OperationLayer.EVENT_ANSWER_DEFAULT.equals(event)) {
-                    if (JRCall.getInstance().answer(mCurItem, mCurItem.isVideo())) {
+                    if (JRCall.getInstance().answer(mCurItem.isVideo())) {
                         mOperationLayer.setStateText("接听中", true, false);
                         mOperationLayer.setStatusIncoming(false, false);
                     }
                     JRRingUtils.stop();
                 } else if (OperationLayer.EVENT_ANSWER_CAMERA_OFF.equals(event)) {
-                    if (JRCall.getInstance().answer(mCurItem, false)) {
+                    if (JRCall.getInstance().answer(false)) {
                         mOperationLayer.setStateText("接听中", true, false);
                         mOperationLayer.setStatusIncoming(false, false);
                     }
                     JRRingUtils.stop();
                 } else if (OperationLayer.EVENT_SWITCH_FRONT_REAR.equals(event)) {
-                    JRCall.getInstance().switchCamera(mCurItem);
+                    JRCall.getInstance().switchCamera();
                 } else if (OperationLayer.EVENT_ANSWER_DECLINE.equals(event)) {
                     if (JRCall.getInstance().endCall(mCurItem, JRCallConstants.TremReason.DECLINE)) {
                         mOperationLayer.setStateText(getString(R.string.ending), true, false);
@@ -276,14 +278,14 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                         JRCall.getInstance().createMultiCall(list, false, null);
                     }
                 } else if (OperationLayer.EVENT_MUTE.equals(event)) {
-                    JRCall.getInstance().mute(mCurItem);
+                    JRCall.getInstance().mute();
                 } else if (OperationLayer.EVENT_SPEAKER.equals(event)) {
                     JRMediaDevice.getInstance().enableSpeaker(null, !mOperationLayer.isSpeakerOn());
                     mOperationLayer.setSpeakerOn(!mOperationLayer.isSpeakerOn());
                 } else if (OperationLayer.EVENT_AUDIO_TO_VIDEO.equals(event)) {
-                    JRCall.getInstance().updateCall(mCurItem, true);
+                    JRCall.getInstance().updateCall( true);
                 } else if (OperationLayer.EVENT_VIDEO_TO_AUDIO.equals(event)) {
-                    if (JRCall.getInstance().updateCall(mCurItem, false)) {
+                    if (JRCall.getInstance().updateCall( false)) {
                         JRMediaDevice.getInstance().stopCamera();
                         mLocalCanvas = null;
                         if (mRemoteCanvas != null) {
@@ -312,7 +314,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                                     Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                                     startActivityForResult(intent, CommonValue.REQUEST_TO_MULTI_CALL);
                                 } else {
-                                    JRCall.getInstance().hold(mCurItem);
+                                    JRCall.getInstance().hold();
                                     Intent intent = new Intent(Intent.ACTION_PICK, ContactsContract.Contacts.CONTENT_URI);
                                     startActivityForResult(intent, CommonValue.REQUEST_ADD_CALL);
                                 }
@@ -321,7 +323,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                         builder.create().show();
                     }
                 } else if (OperationLayer.EVENT_HOLD_CALL.equals(event)) {
-                    if (JRCall.getInstance().hold(mCurItem)) {
+                    if (JRCall.getInstance().hold()) {
                         if (mCurItem.isHold()) {
                             mOperationLayer.setHold(false, true);
                         } else {
@@ -573,13 +575,13 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
             builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    JRCall.getInstance().answerUpdate(item, false);
+                    JRCall.getInstance().answerUpdate(false);
                 }
             });
             builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    JRCall.getInstance().answerUpdate(item, true);
+                    JRCall.getInstance().answerUpdate(true);
                     initSurfaceView(false);
                     mHandler.removeMessages(REJECT_VIDEO_REQ);
                 }
@@ -613,13 +615,6 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                 long duration = System.currentTimeMillis() - item.getTalkingBeginTime();
                 mOperationLayer.setBaseTime(SystemClock.elapsedRealtime() - duration);
                 mOperationLayer.startTimer();
-            }
-        }
-        if (updateType == JRCallConstants.UPDATE_TYPE_CALL_HOLD) {
-            mOperationLayer.setHold(true, true);
-            mOperationLayer.setStateText("挂起", false, false);
-            if (mAnotherItem != null) {
-                JRCall.getInstance().answer(mAnotherItem, false);
             }
         }
         if (updateType == JRCallConstants.UPDATE_TYPE_CALL_UNHOLD) {
@@ -674,7 +669,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
         String dtmfStr = v.getTag().toString();
         mOperationLayer.appendDtmf(dtmfStr);
         if (dtmfStr.length() > 0) {
-            JRCall.getInstance().sendDtmf(mCurItem, getJRDtmf(dtmfStr.substring(0, 1)));
+            JRCall.getInstance().sendDtmf(getJRDtmf(dtmfStr.substring(0, 1)));
         }
     }
 
@@ -839,9 +834,9 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             if (mCurItem.isHold()) {
-                                JRCall.getInstance().answer(item, false);
+                                JRCall.getInstance().answer( false);
                             } else {
-                                JRCall.getInstance().hold(mCurItem);
+                                JRCall.getInstance().hold();
                             }
                         }
                     });
@@ -895,7 +890,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                         return;
                     } else {
                         mAnotherItem = null;
-                        JRCall.getInstance().hold(mCurItem);
+                        JRCall.getInstance().hold();
                     }
                 } else {
                     if (mAnotherItem == null) {
@@ -918,7 +913,7 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                         return;
                     } else {
                         mCurItem = null;
-                        JRCall.getInstance().hold(mAnotherItem);
+                        JRCall.getInstance().hold();
                     }
                 }
                 break;
