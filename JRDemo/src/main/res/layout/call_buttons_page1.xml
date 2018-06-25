@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/call_conference"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible"></ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/call_combo_button_camera_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ui.view.CircleButton
+                android:id="@+id/call_button_camera_off"
+                android:layout_width="@dimen/call_small_circle_button_size"
+                android:layout_height="@dimen/call_small_circle_button_size"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/call_button_text_camera_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/call_text_margin_top"
+                android:text="@string/voice_call"
+                android:textColor="@color/call_btn_text_color"
+                android:textSize="@dimen/call_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/call_combo_button_add_multi_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ui.view.CircleButton
+                android:id="@+id/call_button_add_multi_member"
+                android:layout_width="@dimen/call_small_circle_button_size"
+                android:layout_height="@dimen/call_small_circle_button_size"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/call_button_text_add_multi_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/call_text_margin_top"
+                android:text="@string/add_call"
+                android:textColor="@color/call_btn_text_color"
+                android:textSize="@dimen/call_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/call_combo_button_switch_front_rear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ui.view.CircleButton
+                android:id="@+id/call_button_switch_front_rear"
+                android:layout_width="@dimen/call_small_circle_button_size"
+                android:layout_height="@dimen/call_small_circle_button_size"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/call_button_text_switch_front_rear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/call_text_margin_top"
+                android:text="@string/switch_camera"
+                android:textColor="@color/call_btn_text_color"
+                android:textSize="@dimen/call_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/call_combo_button_camera_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ui.view.CircleButton
+                android:id="@+id/call_button_camera_on"
+                android:layout_width="@dimen/call_small_circle_button_size"
+                android:layout_height="@dimen/call_small_circle_button_size"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/call_button_text_camera_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/call_text_margin_top"
+                android:text="@string/video_call"
+                android:textColor="@color/call_btn_text_color"
+                android:textSize="@dimen/call_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/call_combo_button_add_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ui.view.CircleButton
+                android:id="@+id/call_button_add_call"
+                android:layout_width="@dimen/call_small_circle_button_size"
+                android:layout_height="@dimen/call_small_circle_button_size"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/call_button_text_add_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/call_text_margin_top"
+                android:text="@string/add_call"
+                android:textColor="@color/call_btn_text_color"
+                android:textSize="@dimen/call_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/call_combo_button_merge_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ui.view.CircleButton
+                android:id="@+id/call_button_merge_call"
+                android:layout_width="@dimen/call_small_circle_button_size"
+                android:layout_height="@dimen/call_small_circle_button_size"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/call_button_text_merge_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/call_text_margin_top"
+                android:text="@string/multi_call"
+                android:textColor="@color/call_btn_text_color"
+                android:textSize="@dimen/call_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/call_combo_button_hold_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ui.view.CircleButton
+                android:id="@+id/call_button_hold_call"
+                android:layout_width="@dimen/call_small_circle_button_size"
+                android:layout_height="@dimen/call_small_circle_button_size"
+                android:soundEffectsEnabled="false" />
+
+            <TextView
+                android:id="@+id/call_button_text_hold_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/call_text_margin_top"
+                android:text="@string/call_hold"
+                android:textColor="@color/call_btn_text_color"
+                android:textSize="@dimen/call_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</RelativeLayout>

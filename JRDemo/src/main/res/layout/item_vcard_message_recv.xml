@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/date"
+        android:textSize="12sp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/light_gray" />
+
+    <ImageView
+        android:layout_below="@+id/display_name"
+        android:layout_margin="5dp"
+        android:id="@+id/user_icon"
+        android:src="@drawable/default_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <TextView
+        android:layout_below="@+id/date"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/base"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/user_icon"
+        android:id="@+id/display_name"
+        android:textSize="11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/vcard_layout"
+        android:background="@drawable/im_voice_recv_bg"
+        android:layout_below="@+id/display_name"
+        android:layout_toRightOf="@+id/user_icon"
+        android:layout_margin="10dp"
+        android:layout_width="180dp"
+        android:layout_height="90dp">
+
+        <TextView
+            android:textColor="@color/text_color"
+            android:layout_marginTop="15dp"
+            android:textSize="17sp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:textColor="@color/text_color"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/name"
+            android:textSize="17sp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

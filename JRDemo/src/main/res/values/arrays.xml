@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="reg_type" translatable="false">
+        <item>VoIP</item>
+        <item>MMTel</item>
+        <item>VoLTE</item>
+        <item>RCS 5</item>
+        <item>Hotfixes</item>
+        <item>Blackbird</item>
+        <item>CMCC</item>
+    </string-array>
+    <string-array name="transport_type" translatable="false">
+        <item>UDP</item>
+        <item>TCP</item>
+        <item>TLS</item>
+    </string-array>
+    <string-array name="log_level" translatable="false">
+        <item>OFF</item>
+        <item>ERROR</item>
+        <item>INFO</item>
+        <item>DEBUG</item>
+        <item>FUNCTION</item>
+    </string-array>
+    <string-array name="access_network_type" translatable="false">
+        <item>EN_MTC_ACC_NET_UNKNOWN</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_11</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_11A</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_11B</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_11G</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_11N</item>
+        <item>EN_MTC_ACC_NET_3GPP_GERAN</item>
+        <item>EN_MTC_ACC_NET_3GPP_UTRAN_FDD</item>
+        <item>EN_MTC_ACC_NET_3GPP_UTRAN_TDD</item>
+        <item>EN_MTC_ACC_NET_3GPP_E_UTRAN_FDD</item>
+        <item>EN_MTC_ACC_NET_3GPP_E_UTRAN_TDD</item>
+        <item>EN_MTC_ACC_NET_3GPP_UTRAN</item>
+        <item>EN_MTC_ACC_NET_3GPP_E_UTRAN</item>
+        <item>EN_MTC_ACC_NET_3GPP_WLAN</item>
+        <item>EN_MTC_ACC_NET_3GPP_GAN</item>
+        <item>EN_MTC_ACC_NET_3GPP_HSPA</item>
+        <item>EN_MTC_ACC_NET_3GPP_CDMA2000</item>
+        <item>EN_MTC_ACC_NET_3GPP2_1X</item>
+        <item>EN_MTC_ACC_NET_3GPP2_1X_FEMTO</item>
+        <item>EN_MTC_ACC_NET_3GPP2_1X_HRPD</item>
+        <item>EN_MTC_ACC_NET_3GPP2_UMB</item>
+        <item>EN_MTC_ACC_NET_ADSL</item>
+        <item>EN_MTC_ACC_NET_ADSL2</item>
+        <item>EN_MTC_ACC_NET_ADSL2X</item>
+        <item>EN_MTC_ACC_NET_RADSL</item>
+        <item>EN_MTC_ACC_NET_SDSL</item>
+        <item>EN_MTC_ACC_NET_HDSL</item>
+        <item>EN_MTC_ACC_NET_HDSL2</item>
+        <item>EN_MTC_ACC_NET_G_SHDSL</item>
+        <item>EN_MTC_ACC_NET_VDSL</item>
+        <item>EN_MTC_ACC_NET_IDSL</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3A</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3E</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3I</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3J</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3U</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3AB</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3AE</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3AK</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3AQ</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3AN</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3Y</item>
+        <item>EN_MTC_ACC_NET_IEEE_802_3Z</item>
+        <item>EN_MTC_ACC_NET_GPON</item>
+        <item>EN_MTC_ACC_NET_XGPON1</item>
+        <item>EN_MTC_ACC_NET_GSTN</item>
+    </string-array>
+    <string-array name="tls_very_type" translatable="false">
+        <item>None</item>
+        <item>Option</item>
+        <item>Option No CA</item>
+        <item>Require</item>
+    </string-array>
+    <string-array name="stg_use_type" translatable="false">
+        <item>CLOSE</item>
+        <item>OPEN</item>
+    </string-array>
+    <string-array name="stg_tunnel_type" translatable="false">
+        <item>UDP</item>
+        <item>TCP</item>
+        <item>TLS</item>
+        <item>DTLS</item>
+    </string-array>
+    <string-array name="srtp_type_array" translatable="false">
+        <item>OFF</item>
+        <item>AES128-HMAC80</item>
+        <item>AES128-HMAC32</item>
+    </string-array>
+    <string-array name="packet_length" translatable="false">
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="aec_mode" translatable="false">
+        <item>EN_MTC_EC_AEC</item>
+        <item>EN_MTC_EC_OS</item>
+        <item>EN_MTC_EC_AES</item>
+        <item>EN_MTC_EC_AEC_FDE</item>
+        <item>EN_MTC_EC_AEC_SDE</item>
+    </string-array>
+    <string-array name="video_resolution" translatable="false">
+        <item>176X144</item>
+        <item>240X160</item>
+        <item>312X208</item>
+        <item>320X240</item>
+        <item>352X288</item>
+        <item>480X320</item>
+        <item>640X480</item>
+        <item>704X576</item>
+        <item>1280X720</item>
+    </string-array>
+    <string-array name="ars_mode" translatable="false">
+        <item>Spatial</item>
+        <item>Temporal</item>
+    </string-array>
+    <string-array name="fir_by_info" translatable="false">
+        <item>OFF</item>
+        <item>RTCP</item>
+        <item>INFO</item>
+    </string-array>
+    <string-array name="dtmf" translatable="false">
+        <item>AUTO</item>
+        <item>INBAND</item>
+        <item>OUTBAND</item>
+        <item>INFO</item>
+    </string-array>
+    <string-array name="nat" translatable="false">
+        <item>OFF</item>
+        <item>STUN</item>
+        <item>STUN/TURN</item>
+        <item>STUN/TURN/ICE</item>
+    </string-array>
+    <string-array name="sess_type" translatable="false">
+        <item>OFF</item>
+        <item>NEGO</item>
+        <item>FORCE</item>
+    </string-array>
+    <string-array name="keep_alive_type" translatable="false">
+        <item>DISABLE</item>
+        <item>SIP</item>
+        <item>OPTIONS</item>
+    </string-array>
+    <string-array name="reg_cap_list_values" translatable="false">
+        <item>QVAL</item>
+        <item>CS_VOICE</item>
+        <item>MMTEL</item>
+        <item>ISHARE</item>
+        <item>IM</item>
+        <item>IM_LMSG</item>
+        <item>RCS_CS</item>
+        <item>RCS_GEO</item>
+        <item>RCSE_IM</item>
+        <item>RCSE_FT</item>
+        <item>AUDIO</item>
+        <item>VIDEO</item>
+        <item>CPM</item>
+        <item>CPM_LMSG</item>
+        <item>CPM_FT</item>
+        <item>CPM_SESS</item>
+        <item>SMS_IP</item>
+    </string-array>
+
+    <string-array name="cmcc_reg_cap_list_values" translatable="false">
+        <item>BURN</item>
+        <item>GRP_MAN</item>
+        <item>CLOUD_FILE</item>
+        <item>VEM</item>
+        <item>CMRED_BAG</item>
+        <item>CARD_MSG</item>
+        <item>OFF_MSG</item>
+        <item>139MAIL_NEW</item>
+        <item>GRP_QRCODE</item>
+        <item>EXVCARD_MSG</item>
+        <item>OMAPUSH</item>
+        <item>COM_TEMPLATE</item>
+        <item>CALLCOM</item>
+        <item>MSG_REVOKE</item>
+        <item>CHRED_BAG</item>
+    </string-array>
+
+    <string-array name="debug_record_qualitier" translatable="false">
+        <item>低</item>
+        <item>中</item>
+        <item>高</item>
+    </string-array>
+    <string-array name="debug_record_qualitier_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="packet_mode" translatable="false">
+        <item>0-SINGLE-NALU</item>
+        <item>1-FU-A</item>
+    </string-array>
+    <string-array name="amr_bitrate" translatable="false">
+        <item>4750</item>
+        <item>5150</item>
+        <item>5900</item>
+        <item>6700</item>
+        <item>7400</item>
+        <item>7950</item>
+        <item>10200</item>
+        <item>12200</item>
+    </string-array>
+    <string-array name="amrwb_bitrate" translatable="false">
+        <item>6600</item>
+        <item>8850</item>
+        <item>12650</item>
+        <item>14250</item>
+        <item>15850</item>
+        <item>18250</item>
+        <item>19850</item>
+        <item>23050</item>
+        <item>23850</item>
+    </string-array>
+    <string-array name="call_video_resolution" translatable="false">
+        <item>176X144</item>
+        <item>240X160</item>
+        <item>312X208</item>
+        <item>320X240</item>
+        <item>352X288</item>
+        <item>480X320</item>
+        <item>640X480</item>
+        <item>704X576</item>
+        <item>1280X720</item>
+    </string-array>
+    <string-array name="login_video_resolution" translatable="false">
+        <item>176X144</item>
+        <item>240X160</item>
+        <item>312X208</item>
+        <item>320X240</item>
+        <item>352X288</item>
+        <item>480X320</item>
+        <item>640X480</item>
+        <item>704X576</item>
+        <item>1280X720</item>
+    </string-array>
+    <string-array name="send_agc_mode" translatable="false">
+        <item>OFF</item>
+        <item>ANALOG</item>
+        <item>OS</item>
+        <item>DIGITAL</item>
+        <item>FIXED</item>
+    </string-array>
+    <string-array name="recv_agc_mode" translatable="false">
+        <item>OFF</item>
+        <item>FIXED</item>
+        <item>ADAPTIVE</item>
+    </string-array>
+    <string-array name="anr_mode" translatable="false">
+        <item>OFF</item>
+        <item>LOW</item>
+        <item>MID</item>
+        <item>HIGH</item>
+        <item>VERY HIGH</item>
+    </string-array>
+    <string-array name="vad_mode" translatable="false">
+        <item>OFF</item>
+        <item>NORMAL</item>
+        <item>LOW</item>
+        <item>MID</item>
+        <item>HIGH</item>
+    </string-array>
+</resources>

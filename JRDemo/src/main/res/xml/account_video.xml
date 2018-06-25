@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_video_code">
+        <Preference
+            android:key="advanced_video_code"
+            android:persistent="false"
+            android:title="@string/advanced_video_code" />
+        <ListPreference
+            android:entries="@array/packet_mode"
+            android:entryValues="@array/packet_mode"
+            android:key="advanced_h264_packet_mode"
+            android:persistent="false"
+            android:title="@string/advanced_h264_packet_mode" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_h264_payload"
+            android:persistent="false"
+            android:title="@string/advanced_h264_payload" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_video_bitrate">
+
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_video_bitrate_value"
+            android:persistent="false"
+            android:title="@string/advanced_video_bitrate_value" />
+
+        <CheckBoxPreference
+            android:key="advanced_video_bitrate_control"
+            android:persistent="false"
+            android:title="@string/advanced_video_bitrate_control" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="advanced_audio"
+        android:persistent="false"
+        android:title="@string/advanced_video_resolution">
+
+        <ListPreference
+            android:entries="@array/call_video_resolution"
+            android:entryValues="@array/call_video_resolution"
+            android:key="advanced_resolution_max"
+            android:persistent="false"
+            android:title="@string/advanced_resolution_max" />
+
+        <CheckBoxPreference
+            android:key="advanced_resolution_control"
+            android:persistent="false"
+            android:title="@string/advanced_resolution_control" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_video_framerate">
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_framerate_max"
+            android:persistent="false"
+            android:title="@string/advanced_framerate_max" />
+
+        <CheckBoxPreference
+            android:key="advanced_framerate_control"
+            android:persistent="false"
+            android:title="@string/advanced_framerate_control" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_video_qos">
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_keyperoid"
+            android:persistent="false"
+            android:title="@string/advanced_keyperoid" />
+
+        <ListPreference
+            android:entries="@array/fir_by_info"
+            android:entryValues="@array/fir_by_info"
+            android:key="advanced_firbyinfo"
+            android:persistent="false"
+            android:title="@string/advanced_firbyinfo" />
+        <CheckBoxPreference
+            android:key="advanced_rpsi"
+            android:persistent="false"
+            android:title="@string/advanced_rpsi" />
+        <CheckBoxPreference
+            android:key="advanced_video_fec"
+            android:persistent="false"
+            android:title="@string/advanced_video_fec" />
+        <CheckBoxPreference
+            android:key="advanced_nack"
+            android:persistent="false"
+            android:title="@string/advanced_nack" />
+        <CheckBoxPreference
+            android:key="advanced_rtx"
+            android:persistent="false"
+            android:title="@string/advanced_rtx" />
+        <CheckBoxPreference
+            android:key="advanced_bem"
+            android:persistent="false"
+            android:title="@string/advanced_bem" />
+    </PreferenceCategory>
+    <!--<PreferenceCategory-->
+    <!--android:persistent="false"-->
+    <!--android:title="@string/advanced_video_other">-->
+
+    <!--<CheckBoxPreference-->
+    <!--android:key="advanced_video_capture"-->
+    <!--android:persistent="false"-->
+    <!--android:title="@string/advanced_video_capture" />-->
+    <!--</PreferenceCategory>-->
+
+</PreferenceScreen>

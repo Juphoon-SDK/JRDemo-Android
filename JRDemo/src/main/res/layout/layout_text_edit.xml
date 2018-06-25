@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/btn_layout">
+    <!--文本输入框布局-->
+    <RelativeLayout
+        android:id="@+id/layout_input_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_chat_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/chat_recording_selector" />
+
+        <FrameLayout
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:background="@drawable/ic_chat_talk_text_input_bg">
+
+            <EditText
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="48dp" />
+
+            <Button
+                android:id="@+id/text_send"
+                android:layout_width="48dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="4dp"
+                android:background="@drawable/ic_chat_img_send_btn"
+                android:gravity="center"
+                android:text="发送" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <!--语音输入框布局-->
+    <RelativeLayout
+        android:id="@+id/layout_input_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_chat_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="8dp"
+            android:background="@drawable/chat_content_selector" />
+
+        <TextView
+            android:id="@+id/tv_chat_record"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="48dp"
+            android:layout_marginRight="48dp"
+            android:background="@drawable/ic_chat_talk_voice_bg"
+            android:gravity="center"
+            android:text="按住 说话" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

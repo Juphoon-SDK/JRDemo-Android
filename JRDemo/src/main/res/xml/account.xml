@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="account_basic"
+        android:persistent="false"
+        android:title="@string/empty_title">
+        <EditTextPreference
+            android:key="account_username"
+            android:persistent="false"
+            android:title="@string/username" />
+        <EditTextPreference
+            android:key="account_password"
+            android:password="true"
+            android:persistent="false"
+            android:title="@string/password" />
+        <EditTextPreference
+            android:key="account_authname"
+            android:persistent="false"
+            android:title="@string/authname" />
+        <EditTextPreference
+            android:key="account_nickname"
+            android:persistent="false"
+            android:title="@string/nickname" />
+        <EditTextPreference
+            android:key="account_regip"
+            android:persistent="false"
+            android:title="@string/regip" />
+        <EditTextPreference
+            android:key="account_regrealm"
+            android:persistent="false"
+            android:title="@string/regrealm" />
+
+        <ListPreference
+            android:entries="@array/reg_type"
+            android:entryValues="@array/reg_type"
+            android:key="account_regtype"
+            android:persistent="false"
+            android:title="@string/regtype" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="account_advanced_settings"
+        android:persistent="false"
+        android:title="@string/empty_title">
+        <Preference
+            android:key="account_advanced"
+            android:persistent="false"
+            android:title="@string/advanced" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

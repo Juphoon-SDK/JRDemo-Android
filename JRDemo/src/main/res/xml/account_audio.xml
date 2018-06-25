@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_audio_code">
+        <Preference
+            android:key="advanced_audio_code"
+            android:persistent="false"
+            android:title="@string/advanced_audio_code" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_audio_bitrate"
+            android:persistent="false"
+            android:title="@string/advanced_audio_bitrate" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_ptime"
+            android:persistent="false"
+            android:title="@string/advanced_ptime" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_audio_dtmf">
+        <ListPreference
+            android:entries="@array/dtmf"
+            android:entryValues="@array/dtmf"
+            android:key="advanced_dtmf_type"
+            android:persistent="false"
+            android:title="@string/advanced_dtmf_type" />
+
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_dtmf_payload"
+            android:persistent="false"
+            android:title="@string/advanced_dtmf_payload" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="advanced_audio"
+        android:persistent="false"
+        android:title="@string/advanced_audio_agc">
+
+        <ListPreference
+            android:entries="@array/send_agc_mode"
+            android:entryValues="@array/send_agc_mode"
+            android:key="advanced_send_agc_mode"
+            android:persistent="false"
+            android:title="@string/advanced_send_agc_mode" />
+
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_send_agc"
+            android:persistent="false"
+            android:title="@string/advanced_send_agc" />
+
+        <ListPreference
+            android:entries="@array/recv_agc_mode"
+            android:entryValues="@array/recv_agc_mode"
+            android:key="advanced_recv_agc_mode"
+            android:persistent="false"
+            android:title="@string/advanced_recv_agc_mode" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_recv_agc"
+            android:persistent="false"
+            android:title="@string/advanced_recv_agc" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_audio_anr">
+        <ListPreference
+            android:entries="@array/anr_mode"
+            android:entryValues="@array/anr_mode"
+            android:key="advanced_send_anr_mode"
+            android:persistent="false"
+            android:title="@string/advanced_send_anr_mode" />
+        <ListPreference
+            android:entries="@array/anr_mode"
+            android:entryValues="@array/anr_mode"
+            android:key="advanced_recv_anr_mode"
+            android:persistent="false"
+            android:title="@string/advanced_recv_anr_mode" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_audio_jitter_buffer">
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_jitter_buffer_min_delay"
+            android:persistent="false"
+            android:title="@string/advanced_jitter_buffer_min_delay" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_jitter_buffer_max_packet"
+            android:persistent="false"
+            android:title="@string/advanced_jitter_buffer_max_packet" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:persistent="false"
+        android:title="@string/advanced_audio_qos">
+        <ListPreference
+            android:entries="@array/vad_mode"
+            android:entryValues="@array/vad_mode"
+            android:key="advanced_vad"
+            android:persistent="false"
+            android:title="@string/advanced_vad" />
+        <ListPreference
+            android:entries="@array/aec_mode"
+            android:entryValues="@array/aec_mode"
+            android:key="advanced_aec"
+            android:persistent="false"
+            android:title="@string/advanced_aec" />
+        <CheckBoxPreference
+            android:key="advanced_fec"
+            android:persistent="false"
+            android:title="@string/advanced_fec" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

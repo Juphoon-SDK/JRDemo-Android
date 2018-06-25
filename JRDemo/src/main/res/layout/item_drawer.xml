@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp" />
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:id="@+id/drawer_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_selector"
+        android:minHeight="48dp">
+
+        <ImageView
+            android:id="@+id/drawer_item_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:id="@+id/drawer_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/drawer_item_icon"
+            android:gravity="center_vertical"
+            android:textSize="16sp" />
+
+        <Button
+            android:layout_marginRight="10dp"
+            android:id="@+id/delete"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/account_delete" />
+    </RelativeLayout>
+
+</LinearLayout>
