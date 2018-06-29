@@ -264,10 +264,8 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
                     if (JRCall.getInstance().endCall(mCurItem, JRCallConstants.TremReason.DECLINE)) {
                         mOperationLayer.setStateText(getString(R.string.ending), true, false);
                     }
-                    mHandler.sendEmptyMessageDelayed(UPDATE_END, 500);
                 } else if (OperationLayer.EVENT_END.equals(event)) {
                     JRCall.getInstance().endCall(mCurItem, JRCallConstants.TremReason.NOMAL);
-                    mHandler.sendEmptyMessageDelayed(UPDATE_END, 500);
                 } else if (OperationLayer.EVENT_MERGE_CALL.equals(event)) {
                     if (mCurItem != null && mAnotherItem != null) {
                         String curNumber = mCurItem.getMemberList().get(0).getNumber();
@@ -386,9 +384,9 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
             mAdapter.clearData();
         }
         JRMediaDevice.getInstance().stopAudio();
-        JRCall.getInstance().removeCallback(this);
         JRMediaDevice.getInstance().stopCamera();
         JRMediaDevice.getInstance().enableSpeaker(null, false);
+        JRCall.getInstance().removeCallback(this);
         super.onDestroy();
     }
 
