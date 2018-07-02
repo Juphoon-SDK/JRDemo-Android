@@ -535,6 +535,17 @@ public class JRCallActivity extends AppCompatActivity implements JRCallCallback,
             } else if (item.isVideo() && item.isConference()) {
                 mOperationLayer.setSpeakerOn(true);
                 JRMediaDevice.getInstance().enableSpeaker(null, true);
+            } else if(!item.isVideo()){
+                JRMediaDevice.getInstance().stopCamera();
+                mLocalCanvas = null;
+                if (mRemoteCanvas != null) {
+                    JRMediaDevice.getInstance().stopVideo(mRemoteCanvas);
+                }
+                mRemoteCanvas = null;
+                mVideoLayout.removeAllViews();
+                mVideoLayout.setVisibility(View.GONE);
+                mOperationLayer.setSpeakerOn(false);
+                JRMediaDevice.getInstance().enableSpeaker(null, false);
             }
             mOperationLayer.setStatusIncoming(false, item.isVideo());
             if (isAnotherItem) {

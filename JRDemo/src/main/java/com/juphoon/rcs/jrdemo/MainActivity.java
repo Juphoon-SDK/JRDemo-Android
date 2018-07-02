@@ -16,6 +16,7 @@ import com.cmcc.sso.sdk.auth.TokenListener;
 import com.cmcc.sso.sdk.util.SsoSdkConstants;
 import com.juphoon.rcs.JRAccount;
 import com.juphoon.rcs.JRAccountConstants;
+import com.juphoon.rcs.JRCapacity;
 import com.juphoon.rcs.JRClient;
 import com.juphoon.rcs.JRClientCallback;
 import com.juphoon.rcs.JRClientConstants;
@@ -27,6 +28,9 @@ import com.juphoon.rcs.JRLog;
 import com.juphoon.rcs.JRMessage;
 import com.juphoon.rcs.JRMessageCallback;
 import com.juphoon.rcs.JRMessageItem;
+import com.juphoon.rcs.JRProfile;
+import com.juphoon.rcs.JRProfileConstants;
+import com.juphoon.rcs.MtcUtils;
 import com.yanzhenjie.permission.AndPermission;
 import com.yanzhenjie.permission.PermissionListener;
 
@@ -102,6 +106,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     Toast.makeText(this, "当前无账号登录", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                //示例代码
+//                JRCapacity.getInstance().queryRcsCapacity("+8615757855329");
+//                JRProfile.getInstance().updateSelfIcon(MtcUtils.getSdcardPath(MainActivity.this)+"/JRDemo/download/Icon/+8615757855266.jpg");
+//                JRProfile.getInstance().loadSelfIcon(JRProfileConstants.IconSolution.Solution120);
+//                JRProfile.getInstance().loadUserIcon("15757855329",JRProfileConstants.IconSolution.Solution120);
                 startActivity(new Intent(MainActivity.this, JRMessageListActivity.class));
                 break;
             case 2:
@@ -135,20 +144,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onClientLoginResult(boolean result, JRClientConstants.RegErrorCode reason) {
         if (result) {
             mRealm = RealmHelper.getInstance();
-                CmccTokenManager.getInstance(MainActivity.this).getAppPassword(null, new TokenListener() {
-                    @Override
-                    public void onGetTokenComplete(JSONObject jsonObject) {
-                        if (jsonObject == null) {
-                            return;
-                        }
-                        JRLog.log("token", jsonObject.toString());
-                        int resultCode = jsonObject.optInt(SsoSdkConstants.VALUES_KEY_RESULT_CODE, -1);
-                        if (resultCode == AuthnConstants.CLIENT_CODE_SUCCESS) {
-                            String token = jsonObject.optString(SsoSdkConstants.VALUES_KEY_TOKEN);
-                            JRAccount.getInstance().setAccountConfig(JRClient.getInstance().getCurAccount(), JRAccountConstants.JRAccountConfigHttpToken, token);
-                        }
+            CmccTokenManager.getInstance(MainActivity.this).getAppPassword(null, new TokenListener() {
+                @Override
+                public void onGetTokenComplete(JSONObject jsonObject) {
+                    if (jsonObject == null) {
+                        return;
                     }
-                });
+                    JRLog.log("http token", jsonObject.toString());
+                    int resultCode = jsonObject.optInt(SsoSdkConstants.VALUES_KEY_RESULT_CODE, -1);
+                    if (resultCode == AuthnConstants.CLIENT_CODE_SUCCESS) {
+                        String token = jsonObject.optString(SsoSdkConstants.VALUES_KEY_TOKEN);
+                        JRAccount.getInstance().setAccountConfig(JRClient.getInstance().getCurAccount(), JRAccountConstants.JRAccountConfigHttpToken, token);
+                    }
+                }
+            });
+            CmccTokenManager.getInstance(MainActivity.this).getAppPassword(null, new TokenListener() {
+                @Override
+                public void onGetTokenComplete(JSONObject jsonObject) {
+                    if (jsonObject == null) {
+                        return;
+                    }
+                    JRLog.log("profile token", jsonObject.toString());
+                    int resultCode = jsonObject.optInt(SsoSdkConstants.VALUES_KEY_RESULT_CODE, -1);
+                    if (resultCode == AuthnConstants.CLIENT_CODE_SUCCESS) {
+                        String token = jsonObject.optString(SsoSdkConstants.VALUES_KEY_TOKEN);
+                        JRProfile.getInstance().setToken(token);
+                    } else {
+                        // 统一认证失败
+                    }
+                }
+            });
         }
     }
 
@@ -164,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private void initSDK() {
         JRClient.getInstance().addCallback(this);
-        JRClient.getInstance().startInitWithAppkey(this);
+        JRClient.getInstance().startInitWithAppkey(this, JRClientConstants.DeviceType.APP, "2796fe4f06e6b466");
     }
 
     private void initViews() {

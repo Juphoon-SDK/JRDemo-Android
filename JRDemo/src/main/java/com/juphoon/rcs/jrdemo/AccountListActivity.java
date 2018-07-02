@@ -22,6 +22,7 @@ import com.cmcc.sso.sdk.auth.TokenListener;
 import com.cmcc.sso.sdk.util.SsoSdkConstants;
 import com.juphoon.cmcc.app.lemon.MtcProf;
 import com.juphoon.rcs.JRAccount;
+import com.juphoon.rcs.JRAccountConstants;
 import com.juphoon.rcs.JRAutoConfig;
 import com.juphoon.rcs.JRAutoConfigCallback;
 import com.juphoon.rcs.JRAutoConfigConstants;
@@ -29,6 +30,7 @@ import com.juphoon.rcs.JRClient;
 import com.juphoon.rcs.JRClientCallback;
 import com.juphoon.rcs.JRClientConstants;
 import com.juphoon.rcs.JRLog;
+import com.juphoon.rcs.MtcUtils;
 
 import org.json.JSONObject;
 
@@ -44,6 +46,8 @@ public class AccountListActivity extends AppCompatActivity implements JRAutoConf
     private String mCurLoginedUser;
     private String mLoginTag;
     private HashMap<String, String> mCachedParam;
+//    private String mCachedPwd;
+//    private String mCachedAcc;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -98,6 +102,8 @@ public class AccountListActivity extends AppCompatActivity implements JRAutoConf
                                     mCachedParam = new HashMap<>();
                                     mCachedParam.put(JRAutoConfig.KEY_ACCOUNT, jsonObject.optString(SsoSdkConstants.VALUES_KEY_USERNAME));
                                     mCachedParam.put(JRAutoConfig.KEY_PWD, jsonObject.optString(SsoSdkConstants.VALUES_KEY_PASSWORD));
+//                                    mCachedPwd = jsonObject.optString(SsoSdkConstants.VALUES_KEY_PASSWORD);
+//                                    mCachedAcc = jsonObject.optString(SsoSdkConstants.VALUES_KEY_USERNAME);
                                     mCachedParam.put(JRAutoConfig.KEY_TOKEN, jsonObject.optString(SsoSdkConstants.VALUES_KEY_TOKEN));
                                     JRAutoConfig.getInstance().startAutoConfig(mCachedParam);
                                 } else {
@@ -108,6 +114,10 @@ public class AccountListActivity extends AppCompatActivity implements JRAutoConf
                     } else {
                         mProgress.setMessage("登录中");
                         mProgress.show();
+//                        if(mCachedPwd != null) {
+//                            JRAccount.getInstance().setAccountConfig(mCachedAcc, JRAccountConstants.JRAccountConfigKeyPassword, mCachedPwd);
+//                            mCachedPwd = null;
+//                        }
                         JRClient.getInstance().login(JRAccount.getInstance().getAccountList().get(i));
                         mLoginTag = JRAccount.getInstance().getAccountList().get(i);
                     }
