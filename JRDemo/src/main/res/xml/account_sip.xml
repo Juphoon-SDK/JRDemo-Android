@@ -69,6 +69,11 @@
             android:key="advanced_use_tel_uri"
             android:persistent="false"
             android:title="@string/advanced_use_tel_uri" />
+        <EditTextPreference
+            android:inputType="number"
+            android:key="advanced_conf_id"
+            android:persistent="false"
+            android:title="@string/advanced_conf_app_id" />
     </PreferenceCategory>
 
 </PreferenceScreen>

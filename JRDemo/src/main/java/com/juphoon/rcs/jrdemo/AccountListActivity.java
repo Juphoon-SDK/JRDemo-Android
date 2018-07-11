@@ -14,6 +14,8 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,9 +45,11 @@ public class AccountListActivity extends AppCompatActivity implements JRAutoConf
     private ListView mUserListView;
     private AccountAdapter mAdapter;
     private ProgressDialog mProgress;
+    private RadioGroup mSerType;
     private String mCurLoginedUser;
     private String mLoginTag;
     private HashMap<String, String> mCachedParam;
+    private boolean mIsBusiness = true;
 //    private String mCachedPwd;
 //    private String mCachedAcc;
 
@@ -72,6 +76,17 @@ public class AccountListActivity extends AppCompatActivity implements JRAutoConf
     }
 
     private void initViews() {
+        mSerType = (RadioGroup) findViewById(R.id.server_type);
+        mSerType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                if (checkedId == R.id.radio_server_business) {
+                    mIsBusiness = true;
+                } else if (checkedId == R.id.radio_server_test) {
+                    mIsBusiness = false;
+                }
+            }
+        });
         mUserListView = (ListView) findViewById(R.id.list);
         mAdapter = new AccountAdapter(this);
         mUserListView.setAdapter(mAdapter);
@@ -105,6 +120,7 @@ public class AccountListActivity extends AppCompatActivity implements JRAutoConf
 //                                    mCachedPwd = jsonObject.optString(SsoSdkConstants.VALUES_KEY_PASSWORD);
 //                                    mCachedAcc = jsonObject.optString(SsoSdkConstants.VALUES_KEY_USERNAME);
                                     mCachedParam.put(JRAutoConfig.KEY_TOKEN, jsonObject.optString(SsoSdkConstants.VALUES_KEY_TOKEN));
+                                    mCachedParam.put(JRAutoConfig.KEY_IS_BUS,String.valueOf(mIsBusiness));
                                     JRAutoConfig.getInstance().startAutoConfig(mCachedParam);
                                 } else {
                                     // 统一认证失败

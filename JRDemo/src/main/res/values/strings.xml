@@ -172,6 +172,7 @@
 
     <string name="advanced_sess_type">Timer Type</string>
     <string name="advanced_sess_len">Timer Data(s)</string>
+    <string name="advanced_conf_app_id">Conf App ID</string>
     <string name="advanced_sess_min_len">Minimum Timer(s)</string>
     <string name="advanced_use_tel_uri">Tel URI</string>
     <!--audio-->
@@ -212,6 +213,7 @@
     <string name="advanced_video_framerate">Video Framerate</string>
     <string name="advanced_video_qos">Video QoS Settings</string>
     <string name="advanced_video_other">Other Settings</string>
+    <string name="advanced_video_fec_type">Video FEC type</string>
 
     <string name="advanced_h264_packet_mode">H264 Packet Mode</string>
     <string name="advanced_h264_payload">H264 Payload(118-127)</string>

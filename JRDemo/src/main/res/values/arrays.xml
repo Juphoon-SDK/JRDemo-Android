@@ -21,6 +21,16 @@
         <item>DEBUG</item>
         <item>FUNCTION</item>
     </string-array>
+    <string-array name="fec_type" translatable="false">
+        <item>NONE</item>
+        <item>RED</item>
+        <item>MUTI_SSRC</item>
+    </string-array>
+    <string-array name="fec_type_value" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
     <string-array name="access_network_type" translatable="false">
         <item>EN_MTC_ACC_NET_UNKNOWN</item>
         <item>EN_MTC_ACC_NET_IEEE_802_11</item>

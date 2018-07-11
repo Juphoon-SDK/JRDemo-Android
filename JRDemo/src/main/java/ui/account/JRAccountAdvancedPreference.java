@@ -134,6 +134,7 @@ public class JRAccountAdvancedPreference extends PreferenceFragment implements O
             list.setValueIndex(intTmp);
             setPreString(ADVANCED_SESS_TYPE, list.getValue());
             setPreString(ADVANCED_SESS_LEN, account.getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeySessLen));
+            setPreString(ADVANCED_CONF_ID, account.getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyConfId));
             setPreString(ADVANCED_SESS_MIN_LEN, account.getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeySessMinLen));
         } else if (mType == ADVANCED_TYPE_AUDIO) {
             // 音频编解码
@@ -208,6 +209,9 @@ public class JRAccountAdvancedPreference extends PreferenceFragment implements O
             int intTmp = Integer.valueOf(account.getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyH264PacketMode));
             ListPreference list = (ListPreference) findPreference(ADVANCED_H264_PACKET_MODE);
             list.setValueIndex(intTmp);
+            int fecType = Integer.valueOf(account.getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyVideoFecType));
+            ListPreference fecList = (ListPreference) findPreference(ADVANCED_VIDEO_FEC_TYPE);
+            fecList.setValueIndex(fecType);
             setPreString(ADVANCED_H264_PACKET_MODE, list.getValue());
             setPreString(ADVANCED_H264_PAYLOAD, account.getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyH264Payload));
             setPreString(ADVANCED_VIDEO_BITRATE_VALUE, account.getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyBitrateValue));
@@ -285,6 +289,8 @@ public class JRAccountAdvancedPreference extends PreferenceFragment implements O
             account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyWifiHeartBeat, value);
         } else if (key.equals(ADVANCED_SESS_LEN)) {
             account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeySessLen, value);
+        }  else if (key.equals(ADVANCED_CONF_ID)) {
+            account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyConfId, value);
         } else if (key.equals(ADVANCED_SESS_MIN_LEN)) {
             account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeySessMinLen, value);
         } else if (key.equals(ADVANCED_AUDIO_BITRATE)) {
@@ -331,6 +337,8 @@ public class JRAccountAdvancedPreference extends PreferenceFragment implements O
             account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyAudioPtime, String.valueOf(p.findIndexOfValue(value)));
         } else if (key.equals(ADVANCED_DTMF_TYPE)) {
             account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyDtmfType, String.valueOf(p.findIndexOfValue(value)));
+        } else if (key.equals(ADVANCED_VIDEO_FEC_TYPE)) {
+            account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeyVideoFecType, String.valueOf(p.findIndexOfValue(value)));
         } else if (key.equals(ADVANCED_SEND_AGC_MODE)) {
             if (p.findIndexOfValue(value) == 0) {
                 account.setAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeySendAgc, JRAccount.getInstance().getAccountConfig(mAccount, JRAccountConstants.JRAccountConfigKeySendAgc));
@@ -519,6 +527,7 @@ public class JRAccountAdvancedPreference extends PreferenceFragment implements O
     public final static String ADVANCED_SESS_LEN = "advanced_sess_len";//定时器时长
     public final static String ADVANCED_SESS_MIN_LEN = "advanced_sess_min_len";//最小定时器时长(s)
     private final static String ADVANCED_USE_TEL_URI = "advanced_use_tel_uri";//使用 Tel URI
+    private final static String ADVANCED_CONF_ID = "advanced_conf_id";//多方通话appid
     /**
      * audio
      **/
@@ -549,6 +558,7 @@ public class JRAccountAdvancedPreference extends PreferenceFragment implements O
      * video
      */
     //视频编解码
+    public final static String ADVANCED_VIDEO_FEC_TYPE = "advanced_video_fec_type";
     public final static String ADVANCED_VIDEO_CODE = "advanced_video_code";
     public final static String ADVANCED_H264_PACKET_MODE = "advanced_h264_packet_mode";
     public final static String ADVANCED_H264_PAYLOAD = "advanced_h264_payload";
