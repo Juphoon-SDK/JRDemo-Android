@@ -31,7 +31,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_camera_off"
                 android:layout_width="@dimen/call_small_circle_button_size"
                 android:layout_height="@dimen/call_small_circle_button_size"
@@ -56,7 +56,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_add_multi_member"
                 android:layout_width="@dimen/call_small_circle_button_size"
                 android:layout_height="@dimen/call_small_circle_button_size"
@@ -85,7 +85,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_switch_front_rear"
                 android:layout_width="@dimen/call_small_circle_button_size"
                 android:layout_height="@dimen/call_small_circle_button_size"
@@ -128,7 +128,7 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_camera_on"
                 android:layout_width="@dimen/call_small_circle_button_size"
                 android:layout_height="@dimen/call_small_circle_button_size"
@@ -158,7 +158,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_add_call"
                 android:layout_width="@dimen/call_small_circle_button_size"
                 android:layout_height="@dimen/call_small_circle_button_size"
@@ -184,7 +184,7 @@
             android:orientation="vertical"
             android:visibility="gone">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_merge_call"
                 android:layout_width="@dimen/call_small_circle_button_size"
                 android:layout_height="@dimen/call_small_circle_button_size"
@@ -215,7 +215,7 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_hold_call"
                 android:layout_width="@dimen/call_small_circle_button_size"
                 android:layout_height="@dimen/call_small_circle_button_size"

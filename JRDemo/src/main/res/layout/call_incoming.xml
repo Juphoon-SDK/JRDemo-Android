@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ui.view.CallIncomingSlideView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.juphoon.jrsdk.view.CallIncomingSlideView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/call_incoming_slide_bg">
@@ -16,7 +16,7 @@
         android:background="@drawable/call_incoming_anim_bg"
         android:visibility="invisible" />
 
-    <ui.view.CircleButton
+    <com.juphoon.jrsdk.view.CircleButton
         android:id="@+id/call_answer"
         android:layout_width="@dimen/call_large_circle_button_size"
         android:layout_height="@dimen/call_large_circle_button_size"
@@ -35,7 +35,7 @@
         android:layout_toRightOf="@+id/call_answer"
         android:layout_toEndOf="@+id/call_answer">
 
-        <ui.view.CircleButton
+        <com.juphoon.jrsdk.view.CircleButton
             android:id="@+id/call_answer_camera_off"
             android:layout_width="@dimen/call_large_circle_button_size"
             android:layout_height="@dimen/call_large_circle_button_size"
@@ -45,7 +45,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <ui.view.CircleButton
+        <com.juphoon.jrsdk.view.CircleButton
             android:id="@+id/call_decline"
             android:layout_width="@dimen/call_large_circle_button_size"
             android:layout_height="@dimen/call_large_circle_button_size"
@@ -56,4 +56,4 @@
             android:layout_centerVertical="true" />
     </RelativeLayout>
 
-</ui.view.CallIncomingSlideView>
+</com.juphoon.jrsdk.view.CallIncomingSlideView>

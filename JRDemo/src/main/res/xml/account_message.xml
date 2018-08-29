@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="account_basic"
+        android:persistent="false"
+        android:title="@string/advanced_sip_advanced">
+        <CheckBoxPreference
+            android:key="advanced_message_deli_succ"
+            android:persistent="false"
+            android:title="@string/advanced_message_deli_succ" />
+        <CheckBoxPreference
+            android:key="advanced_message_deli_fail"
+            android:persistent="false"
+            android:title="@string/advanced_message_deli_fail" />
+        <CheckBoxPreference
+            android:key="advanced_message_deli_forward"
+            android:persistent="false"
+            android:title="@string/advanced_message_deli_forward" />
+        <CheckBoxPreference
+            android:key="advanced_message_send_disp_req"
+            android:persistent="false"
+            android:title="@string/advanced_message_send_disp_req" />
+        <CheckBoxPreference
+            android:key="advanced_group_message_deli_succ"
+            android:persistent="false"
+            android:title="@string/advanced_group_message_deli_succ" />
+        <CheckBoxPreference
+            android:key="advanced_group_message_deli_fail"
+            android:persistent="false"
+            android:title="@string/advanced_group_message_deli_fail" />
+        <CheckBoxPreference
+            android:key="advanced_group_message_send_disp_req"
+            android:persistent="false"
+            android:title="@string/advanced_group_message_send_disp_req" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

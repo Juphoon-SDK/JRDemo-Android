@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.juphoon.rcs.jrdemo">
+    package="com.juphoon.jrsdk">
 
     <!-- baidu map api -->
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
@@ -61,7 +61,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -69,10 +71,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".JRMessageListActivity"
+            android:name=".AccountListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AccountListActivity"
+            android:name=".AccountAdvancedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JRMessageListActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".CreateAccountActivity"
@@ -82,12 +90,6 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".LocationBaiduActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".AccountActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".AccountAdvancedActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ImageActivity"
@@ -102,10 +104,19 @@
             android:name=".AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JRCallLogActivity"
+            android:name=".JRGroupListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".JRInfoActivity"
+            android:name=".JRGroupInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".JRGroupMemberListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CapActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".JRCallActivity"
@@ -115,6 +126,10 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoBar" />
 
+        <!--统一认证服务-->
+        <service
+            android:name="com.cmcc.sso.service.SsoService"
+            android:process=":CMCCSsoService"></service>
         <!-- 百度地图SDK -->
         <service
             android:name="com.baidu.location.f"
@@ -134,14 +149,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-        <!-- 统一认证服务 -->
-        <service
-            android:name="com.cmcc.sso.service.SsoService"
-            android:process=":CMCCSsoService" />
-
-        <activity android:name=".JRGroupListActivity" />
-        <activity android:name=".JRGroupInfoActivity" />
-        <activity android:name=".JRGroupMemberListActivity" />
     </application>
 
 </manifest>

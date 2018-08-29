@@ -50,6 +50,16 @@
     <string name="advanced_sip_register">注册</string>
     <string name="advanced_sip_heartbeat">心跳</string>
     <string name="advanced_sip_advanced">高级配置</string>
+    <string name="advanced_sip_deli">回执设置</string>
+    <!--回执配置项-->
+    <string name="advanced_message">消息</string>
+    <string name="advanced_message_deli_succ">消息递送成功回执</string>
+    <string name="advanced_message_deli_fail">消息递送失败回执</string>
+    <string name="advanced_message_deli_forward">消息转短回执</string>
+    <string name="advanced_message_send_disp_req">消息已读回执</string>
+    <string name="advanced_group_message_deli_succ">群消息递送成功回执</string>
+    <string name="advanced_group_message_deli_fail">群消息递送失败回执</string>
+    <string name="advanced_group_message_send_disp_req">群消息已读回执</string>
 
     <string name="regtype">注册类型</string>
     <string name="advanced_reg_no_digest">注册无鉴权头</string>
@@ -63,6 +73,7 @@
 
     <string name="advanced_sess_type">定时器类型</string>
     <string name="advanced_sess_len">定时器时长(s)</string>
+    <string name="advanced_conf_app_id">多方通话 App ID</string>
     <string name="advanced_sess_min_len">最小定时器时长(s)</string>
     <string name="advanced_use_tel_uri">使用teluri</string>
     <!--audio-->
@@ -103,6 +114,7 @@
     <string name="advanced_video_framerate">帧率配置</string>
     <string name="advanced_video_qos">视频QoS配置</string>
     <string name="advanced_video_other">其他配置</string>
+    <string name="advanced_video_fec_type">视频冗余类型</string>
 
     <string name="advanced_h264_packet_mode">H264打包模式</string>
     <string name="advanced_h264_payload">H264 Payload值(118-127)</string>
@@ -179,4 +191,23 @@
     <string name="recent">最近</string>
     <string name="about_version_num">Version %s</string>
     <string name="kick_member_message">确定把 %1$s 踢出会议吗？</string>
+    <string name="invite_member_message">确定邀请 %1$s 进入会议吗？</string>
+
+    <!--举报消息原因-->
+    <string name="menu_political_rumor">政治谣言</string>
+    <string name="menu_jurisprudence">涉黄</string>
+    <string name="menu_lie">诈骗</string>
+    <string name="menu_malicious_marketing">恶意营销</string>
+    <string name="menu_violence">恐暴</string>
+    <string name="menu_others">其他</string>
+
+    <string name="someone_join">%1$s 已经加入群聊</string>
+    <string name="someone_leave">%1$s 已经离开群聊</string>
+    <string name="subject_change">群名修改成 %1$s</string>
+    <string name="chairman_change">%1$s 成为群主</string>
+
+    <string name="content_max">超出文本上限</string>
+    <string name="no_quota">无额度</string>
+    <string name="no_auth">无权限</string>
+    <string name="other_error">其他错误</string>
 </resources>

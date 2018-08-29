@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="white">#ffffff</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="sample_rcsmsg_list_background_pressed">#4C00B4F4</color>
+    <color name="white">#ffffff</color>
     <color name="base">#ff00bcd4</color>
     <color name="light_gray">#dcdcdc</color>
     <color name="orange">#f6be1a</color>
@@ -40,6 +40,7 @@
     <color name="call_menu_redial_bg_normal_color">#ff26D650</color>
     <color name="call_menu_redial_bg_pressed_color">#8026D650</color>
     <color name="call_menu_redial_bg_disabled_color">#4d000000</color>
+
 
     <!--统一认证-->
     <color name="sso_flow_reminder_button_gradient_startcolor">#66BAFF</color>

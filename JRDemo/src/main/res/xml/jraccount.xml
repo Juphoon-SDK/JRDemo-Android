@@ -65,6 +65,10 @@
             android:key="account_advanced_transport"
             android:persistent="false"
             android:title="@string/advanced_transport" />
+        <Preference
+            android:key="account_advanced_message"
+            android:persistent="false"
+            android:title="@string/advanced_message" />
     </PreferenceCategory>
 
 </PreferenceScreen>

@@ -15,7 +15,7 @@
         android:paddingTop="42dp"
         android:soundEffectsEnabled="false">
 
-        <ui.view.FontFitTextView
+        <com.juphoon.jrsdk.view.FontFitTextView
             android:id="@+id/call_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
         android:layout_alignParentBottom="true"
         android:soundEffectsEnabled="false">
 
-        <ui.view.CircleButton
+        <com.juphoon.jrsdk.view.CircleButton
             android:id="@+id/call_button_end"
             android:layout_width="@dimen/call_large_circle_button_size"
             android:layout_height="@dimen/call_large_circle_button_size"
@@ -69,7 +69,7 @@
             android:orientation="vertical"
             android:visibility="gone">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_cancel"
                 android:layout_width="@dimen/call_large_circle_button_size"
                 android:layout_height="@dimen/call_large_circle_button_size"
@@ -98,7 +98,7 @@
             android:orientation="vertical"
             android:visibility="visible">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_redial"
                 android:layout_width="@dimen/call_large_circle_button_size"
                 android:layout_height="@dimen/call_large_circle_button_size"
@@ -126,7 +126,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_mute"
                 android:layout_width="@dimen/call_large_circle_button_size"
                 android:layout_height="@dimen/call_large_circle_button_size"
@@ -154,7 +154,7 @@
             android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <ui.view.CircleButton
+            <com.juphoon.jrsdk.view.CircleButton
                 android:id="@+id/call_button_speaker"
                 android:layout_width="@dimen/call_large_circle_button_size"
                 android:layout_height="@dimen/call_large_circle_button_size"
@@ -171,14 +171,14 @@
         android:layout_marginBottom="12dp"
         android:gravity="center_horizontal">
 
-        <ui.view.TwoStateScrollViewPager
+        <com.juphoon.jrsdk.view.TwoStateScrollViewPager
             android:id="@+id/button_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="22dp"
             android:soundEffectsEnabled="false" />
 
-        <ui.view.CirclePageIndicator
+        <com.juphoon.jrsdk.view.CirclePageIndicator
             android:id="@+id/button_pager_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="message_context_menu_copy">142</integer>
+    <integer name="message_context_menu_forward">143</integer>
+    <integer name="message_context_menu_favorite">144</integer>
+    <integer name="message_context_menu_delete">145</integer>
+    <integer name="message_context_menu_report">146</integer>
+    <integer name="message_context_menu_more">147</integer>
+    <integer name="message_context_menu_super_sms">148</integer>
+    <integer name="message_context_menu_msg_recall">149</integer>
+
+
+    <integer name="report_reason_id_pol">1</integer>
+    <integer name="report_reason_id_jur">2</integer>
+    <integer name="report_reason_id_lie">3</integer>
+    <integer name="report_reason_id_mal">4</integer>
+    <integer name="report_reason_id_vio">5</integer>
+    <integer name="report_reason_id_other">9</integer>
+
+
+</resources>

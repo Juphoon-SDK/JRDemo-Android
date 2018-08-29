@@ -56,4 +56,14 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textColor="@color/light_gray" />
+
+    <ImageView
+        android:visibility="gone"
+        android:src="@drawable/ic_burn_image_recv"
+        android:gravity="center"
+        android:layout_below="@+id/display_name"
+        android:layout_toRightOf="@+id/user_icon"
+        android:id="@+id/burn_view"
+        android:layout_width="150dp"
+        android:layout_height="120dp"/>
 </RelativeLayout>

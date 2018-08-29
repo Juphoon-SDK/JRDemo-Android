@@ -20,12 +20,18 @@
             android:layout_centerVertical="true"
             android:layout_margin="8dp"
             android:background="@drawable/chat_recording_selector" />
+        <CheckBox
+            android:id="@+id/is_burn"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/iv_chat_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <FrameLayout
             android:layout_marginTop="3dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="48dp"
+            android:layout_marginLeft="88dp"
             android:background="@drawable/ic_chat_talk_text_input_bg">
 
             <EditText

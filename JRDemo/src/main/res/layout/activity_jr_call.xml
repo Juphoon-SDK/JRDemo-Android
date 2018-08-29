@@ -31,7 +31,7 @@
 
     </RelativeLayout>
 
-    <ui.view.RotateLayout
+    <com.juphoon.jrsdk.view.RotateLayout
         android:id="@+id/call_error_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:layout_alignParentTop="true"
         android:visibility="gone">
 
-        <ui.view.CancelableTextView
+        <com.juphoon.jrsdk.view.CancelableTextView
             android:id="@+id/call_error"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -53,5 +53,5 @@
             android:textColor="@android:color/white"
             android:textSize="13sp" />
 
-    </ui.view.RotateLayout>
+    </com.juphoon.jrsdk.view.RotateLayout>
 </RelativeLayout>

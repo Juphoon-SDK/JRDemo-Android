@@ -89,6 +89,12 @@
             android:key="advanced_video_fec"
             android:persistent="false"
             android:title="@string/advanced_video_fec" />
+        <ListPreference
+            android:entries="@array/fec_type"
+            android:entryValues="@array/fec_type_value"
+            android:key="advanced_video_fec_type"
+            android:persistent="false"
+            android:title="@string/advanced_video_fec_type" />
         <CheckBoxPreference
             android:key="advanced_nack"
             android:persistent="false"

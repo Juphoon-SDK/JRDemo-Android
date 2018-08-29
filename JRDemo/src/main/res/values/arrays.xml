@@ -277,4 +277,20 @@
         <item>MID</item>
         <item>HIGH</item>
     </string-array>
+    <string-array name="report_reason">
+        <item>@string/menu_political_rumor</item>
+        <item>@string/menu_jurisprudence</item>
+        <item>@string/menu_lie</item>
+        <item>@string/menu_malicious_marketing</item>
+        <item>@string/menu_violence</item>
+        <item>@string/menu_others</item>
+    </string-array>
+    <integer-array name="report_reason_ids">
+        <item>@integer/report_reason_id_pol</item>
+        <item>@integer/report_reason_id_jur</item>
+        <item>@integer/report_reason_id_lie</item>
+        <item>@integer/report_reason_id_mal</item>
+        <item>@integer/report_reason_id_vio</item>
+        <item>@integer/report_reason_id_other</item>
+    </integer-array>
 </resources>

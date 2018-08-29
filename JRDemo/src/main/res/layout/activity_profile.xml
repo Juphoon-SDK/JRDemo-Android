@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/profile_icon"
+        android:layout_margin="20dp"
+        android:layout_width="150dp"
+        android:layout_height="200dp" />
+    <Button
+        android:onClick="onLoadSelf"
+        android:text="获取自己头像"
+        android:id="@+id/load_self"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/profile_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="onLoadUser"
+        android:text="获取他人头像"
+        android:layout_below="@+id/load_self"
+        android:id="@+id/load_other"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/profile_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:onClick="onUploadSelf"
+        android:text="上传自己头像"
+        android:layout_below="@+id/load_other"
+        android:id="@+id/upload_self"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/profile_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/edit_input"
+        android:hint="输入想要查询的号码"
+        android:layout_below="@+id/upload_self"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

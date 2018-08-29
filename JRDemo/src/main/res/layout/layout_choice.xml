@@ -20,4 +20,9 @@
         android:text="是否是多方"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <CheckBox
+        android:id="@+id/is_mcu"
+        android:text="是否是mcu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
